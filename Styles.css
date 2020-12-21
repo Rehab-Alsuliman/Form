@@ -1,0 +1,106 @@
+:root {
+  --subject: #9eecfa;
+  --text: #363636;
+  --text-light: #898989;
+  --primary: #1bbeff;
+  --border: #bbbbbb;
+  --padding: 16px 24px;
+  --line-height: 24px;
+}
+
+body {
+  background: linear-gradient(to right, #ffffff, #19d7f8);
+}
+.input-group {
+  width: 360px;
+  position: relative;
+  border: 3px solid var(--border);
+  border-radius: 8px;
+  margin: 32px;
+}
+.input-group input {
+  padding: var(--padding);
+  border: none;
+  background-color: transparent;
+  width: 90%;
+  color: var(--text);
+  font-size: 16px;
+  line-height: var(--line-height);
+}
+
+.input-group:hover,
+.input-group:focus-within {
+  border-color: var(--primary);
+}
+
+.input-group input:focus,
+.input-group:hover input {
+  color: var(--primary);
+}
+
+.input-group label {
+  position: absolute;
+  background-color: transparent;
+  padding: var(--padding);
+  line-height: var(--line-height);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  color: var(--text-light);
+  cursor: text;
+}
+
+.input-group:hover label {
+  color: var(--primary);
+}
+
+.input-group:focus-within label,
+.input-group input:not(:placeholder-shown) ~ label {
+  padding: 0px 8px;
+  background-color: var(--subject);
+  top: -12px;
+  left: 16px;
+  bottom: auto;
+  color: var(--text);
+}
+.input-group select {
+  padding: var(--padding);
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  color: var(--text);
+  font-size: 16px;
+  line-height: var(--line-height);
+}
+
+.input-group select:focus,
+.input-group:hover select {
+  color: var(--primary);
+}
+.input-group:focus-within label,
+.input-group select:not(:placeholder-shown) ~ label {
+  padding: 0px 8px;
+  background-color: var(--subject);
+  top: -12px;
+  left: 16px;
+  bottom: auto;
+  color: var(--text);
+}
+
+.selection {
+  padding: var(--padding);
+  border: 1px solid var(--border);
+  line-height: var(--line-height);
+  color: var(--text);
+  width: 15%;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: transparent;
+  margin-left: 60px;
+  margin-right: 50px;
+}
+.selection:hover {
+  color: var(--primary);
+  background-color: var(--text);
+  box-shadow: 10px 10px 5px var(--text-light);
+}
