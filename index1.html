@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title></title>
+        <link rel="stylesheet" href="CSS/Styles.css"/>
+        <script>
+            function validateForm() {
+                var x = document.MyForms["Name","Department","Position","Address","Number","Email"].value;
+                if(x == "")
+                alert("Please Filled the Form.")
+                return false;
+                }
+            
+        </script>
+    </head>
+    <body>
+        
+        <form name="MyForms" onsubmit="(validateForm());">
+            <div class="input-group">
+                <input type="text"  id="Name" name="Name" placeholder=""/>
+                <label for="Name" >Name</label>
+            </div>
+            <div class="input-group">
+                <select id="Department" name="Department">
+                    <option value="">-</option>
+                    <option value="IT">IT</option>
+                    <option value="IT">IT</option>
+                </select>
+                <label for="Department">Departement</label>
+                
+            </div>
+            <div class="input-group">
+                <select id="Position" name="Position">
+                    <option value="">-</option>
+                    <option value="Networks">Networks</option>
+                    <option value="Developer">Developer</option>
+                </select>
+                <label for="Position">Position</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="Address" name="Address" placeholder=""/>
+                <label for="Address">Address</label>
+            </div>
+            <div class="input-group">
+                <input type="number"  id="Number" name="Number" placeholder="" />
+                <label for="Number">Mobile Number</label>
+            </div>
+            <div class="input-group">
+                <input type="email" name="Email" id="Email" placeholder="" />
+                <label for="Email">Email</label>
+            </div>
+            <input type="submit" onclick="validateForm()" value="Submit" class="selection">
+        </form>
+    </body>
+</html>
